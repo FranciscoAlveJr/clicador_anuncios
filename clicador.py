@@ -14,8 +14,8 @@ import getpass
 from random import random
 
 params = {
-    'latitude': -7.113694623257644,
-    'longitude': -34.82716943928752,
+    'latitude': '',
+    'longitude': '',
     'accuracy': 100
 }
 
@@ -49,9 +49,9 @@ page = driver.page_source
 soup = bs(page, 'html.parser')
 
 
-sites = ['liguelojadasbaterias', 'lojadasbateriasjoaopessoa', 'lojadasbateriaspe', 'lojadasbateriasjp', 'vertiv', 'mourafacil', 'ferreiracosta', 'gigapromo', 'izito']
+sites = []
 
-concorrentes = ['sentinelabaterias', 'batcenter', 'drbaterias', 'expressbaterias', 'joiabaterias', 'araujobateriasligue', 'liguetopbateriasmumbaba', 'ligueazbaterias', 'expressbateriasmanaira', 'casadoescapamento', 'germanobaterias', 'liguesobateriaseacessorios', 'evaldobaterias', 'marcelobaterias', 'centraldasbateriaspe', 'expressbateriasmanaira', 'expressbateriasbessa', 'expressbateriascentro', 'expressbaterias', 'expressbateriasjoseamerico', 'expressbateriasmangabeira', 'ng-baterias-centro', 'shoppingdasbateriaspe', 'mercantilbaterias', 'bateriarecife', 'casadabateria', 'trocarapidabaterias', 'heliarexpress', 'liguecasadoescamento', 'ldmbaterias', 'reiforbaterias', 'nilbaterias']
+concorrentes = []
  
 print()
 print('ANÚNCIOS CLICADOS:')
