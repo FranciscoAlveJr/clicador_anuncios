@@ -24,9 +24,9 @@ usuario = getpass.getuser()
 options = Options()
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
 options.add_experimental_option('prefs', {'geolocation': True})
-options.add_argument(f"user-data-dir=C:/Users/{usuario}/AppData/Local/Google/Chrome/User Data/")
+# options.add_argument(f"user-data-dir=C:/Users/{usuario}/AppData/Local/Google/Chrome/User Data/")
 driver = Chrome(service=Service(ChromeDriverManager().install()), options=options)
-# driver.execute_cdp_cmd("Emulation.setGeolocationOverride", params)
+driver.execute_cdp_cmd("Emulation.setGeolocationOverride", params)
 driver.get('https://www.google.com.br/')
 
 with open('keys.txt', 'r+', encoding='UTF-8') as r:
@@ -51,7 +51,7 @@ soup = bs(page, 'html.parser')
 
 sites = ['liguelojadasbaterias', 'lojadasbateriasjoaopessoa', 'lojadasbateriaspe', 'lojadasbateriasjp', 'vertiv', 'mourafacil', 'ferreiracosta', 'gigapromo', 'izito']
 
-concorrentes = ['sentinelabaterias', 'batcenter', 'drbaterias', 'expressbaterias', 'joiabaterias', 'araujobateriasligue', 'liguetopbateriasmumbaba', 'ligueazbaterias', 'expressbateriasmanaira', 'casadoescapamento', 'germanobaterias', 'liguesobateriaseacessorios', 'evaldobaterias', 'marcelobaterias', 'centraldasbateriaspe', 'expressbateriasmanaira', 'expressbateriasbessa', 'expressbateriascentro', 'expressbaterias', 'expressbateriasjoseamerico', 'expressbateriasmangabeira', 'ng-baterias-centro', 'shoppingdasbateriaspe', 'mercantilbaterias', 'bateriarecife', 'casadabateria', 'trocarapidabaterias', 'heliarexpress', 'liguecasadoescamento', 'ldmbaterias', 'reiforbaterias', 'nilbaterias']
+concorrentes = ['sentinelabaterias', 'batcenter', 'drbaterias', 'expressbaterias', 'joiabaterias', 'araujobateriasligue', 'liguetopbateriasmumbaba', 'ligueazbaterias', 'expressbateriasmanaira', 'casadoescapamento', 'germanobaterias', 'liguesobateriaseacessorios', 'evaldobaterias', 'marcelobaterias', 'centraldasbateriaspe', 'expressbateriasmanaira', 'expressbateriasbessa', 'expressbateriascentro', 'expressbaterias', 'expressbateriasjoseamerico', 'expressbateriasmangabeira', 'ng-baterias-centro', 'shoppingdasbateriaspe', 'mercantilbaterias', 'bateriarecife', 'casadabateria', 'trocarapidabaterias', 'heliarexpress', 'liguecasadoescamento', 'ldmbaterias', 'reiforbaterias', 'nilbaterias', 'manairabaterias', 'liguecasadoescapamento', 'ligueribeirosbaterias']
  
 print()
 print('ANÚNCIOS CLICADOS:')
