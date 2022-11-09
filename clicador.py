@@ -24,9 +24,9 @@ usuario = getpass.getuser()
 options = Options()
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
 options.add_experimental_option('prefs', {'geolocation': True})
-# options.add_argument(f"user-data-dir=C:/Users/{usuario}/AppData/Local/Google/Chrome/User Data/")
+options.add_argument(f"user-data-dir=C:/Users/{usuario}/AppData/Local/Google/Chrome/User Data/")
 driver = Chrome(service=Service(ChromeDriverManager().install()), options=options)
-driver.execute_cdp_cmd("Emulation.setGeolocationOverride", params)
+# driver.execute_cdp_cmd("Emulation.setGeolocationOverride", params)
 driver.get('https://www.google.com.br/')
 
 with open('keys.txt', 'r+', encoding='UTF-8') as r:
